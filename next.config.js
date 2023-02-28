@@ -1,11 +1,15 @@
-module.exports = {
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/home': { page: '/' },
-      '/about': { page: '/about' },
-    }
-  },
-}
+const withImages = require('next-images');
+
+const redirects = {
+  async redirects() {
+    return [
+      {
+        source: '/dashboards',
+        destination: '/dashboards/tasks',
+        permanent: true
+      }
+    ];
+  }
+};
+
+module.exports = withImages(redirects);

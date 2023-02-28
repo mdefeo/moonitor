@@ -1,13 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/",
-    "paths": {
-      "@styles/*": ["../public/css/*"],
-      "@scripts/*": ["../public/js/*"],
-      "@images/*": ["../public/img/*"],
-      "@data/*": ["Data/*"],
-      "@assets/*": ["assets/*"],
-      "@/*": ["/*"]
-    }
-  }
+    "baseUrl": "."
+  },
+  "include": ["src"]
 }
